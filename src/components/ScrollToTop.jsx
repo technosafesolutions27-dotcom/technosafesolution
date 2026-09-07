@@ -1,4 +1,4 @@
- 
+
 import React, { useEffect, useState } from "react";
 import "./ScrollToTop.css";
 
@@ -7,15 +7,10 @@ export default function ScrollToTop() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setVisible(true);
-      } else {
-        setVisible(false);
-      }
+      setVisible(window.scrollY > 300);
     };
 
     window.addEventListener("scroll", handleScroll);
-
     handleScroll();
 
     return () => {
@@ -37,6 +32,7 @@ export default function ScrollToTop() {
       onClick={scrollToTop}
       aria-label="Back to top"
       title="Back to top"
+      style={{ display: "none" }}
     >
       <i className="fa-solid fa-arrow-up"></i>
     </button>

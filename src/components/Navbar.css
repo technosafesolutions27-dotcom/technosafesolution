@@ -1,16 +1,18 @@
-
 /* =========================================================
    TECHNOSAFE NAVBAR
    BLACK + RED + WHITE THEME
+
    UPDATED:
-   - Larger TECHNOSAFE™
+   - SAME DESKTOP LOGO SIZE ON ALL DEVICES
+   - TECHNOSAFE = 40px EVERYWHERE
+   - ™ = 15px EVERYWHERE
+   - Email + Phone visible on ALL devices
+   - Mobile white gap fixed
    - Wider Header / Container
    - White Text
    - Red Solutions Badge
    - Light Red CTA
 ========================================================= */
-
-
 
 :root {
   --ts-black: #050505;
@@ -40,15 +42,25 @@
   z-index: 9999;
 
   font-family: "Outfit", Arial, sans-serif;
-}
 
-body {
   margin: 0;
   padding: 0;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  max-width: 100%;
+
+  overflow-x: hidden;
+}
+
 #root {
   padding-top: 132px;
+  margin: 0;
 }
 
 .ts-nav *,
@@ -74,8 +86,13 @@ body {
 
 .ts-nav-top {
   width: 100%;
+
   background: #000000;
+
   border-bottom: 1px solid var(--ts-border);
+
+  margin: 0;
+  padding: 0;
 }
 
 .ts-nav-top-inner {
@@ -86,6 +103,9 @@ body {
   justify-content: space-between;
 
   gap: 25px;
+
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -96,6 +116,7 @@ body {
 .ts-nav-top-left {
   display: flex;
   align-items: center;
+
   gap: 18px;
 
   min-width: 0;
@@ -135,6 +156,8 @@ body {
   background: rgba(255, 255, 255, 0.25);
 
   display: inline-block;
+
+  flex-shrink: 0;
 }
 
 
@@ -161,6 +184,9 @@ body {
   background: var(--ts-black);
 
   border-bottom: 1px solid var(--ts-border);
+
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -176,6 +202,9 @@ body {
   justify-content: space-between;
 
   gap: 45px;
+
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -194,6 +223,9 @@ body {
   flex-shrink: 0;
 
   min-width: 290px;
+
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -203,14 +235,19 @@ body {
 
 .ts-logo-text {
   display: flex;
+
   flex-direction: column;
+
   justify-content: center;
+
+  margin: 0;
+  padding: 0;
 }
 
 
 /* =========================================================
    TECHNOSAFE BRAND
-   EXTRA LARGE + BOLD
+   SAME SIZE ON ALL DEVICES
 ========================================================= */
 
 .ts-logo-brand {
@@ -234,12 +271,15 @@ body {
 
   text-shadow:
     0 1px 0 rgba(255, 255, 255, 0.08);
+
+  margin: 0;
+  padding: 0;
 }
 
 
 /* =========================================================
    TRADEMARK ™
-   BIGGER
+   SAME SIZE ON ALL DEVICES
 ========================================================= */
 
 .ts-logo-tm {
@@ -267,6 +307,7 @@ body {
 
 .ts-logo-bottom {
   display: flex;
+
   align-items: center;
 
   gap: 8px;
@@ -604,13 +645,13 @@ body {
   }
 
   .ts-logo-brand {
-    font-size: 43px;
+    font-size: 40px;
   }
 
   .ts-logo-tm {
-    font-size: 16px;
+    font-size: 15px;
 
-    top: -21px;
+    top: -19px;
   }
 
   .ts-nav-link {
@@ -637,17 +678,19 @@ body {
   }
 
   .ts-nav-logo {
-    min-width: 260px;
+    min-width: 290px;
   }
 
+  /* KEEP DESKTOP LOGO SIZE */
+
   .ts-logo-brand {
-    font-size: 35px;
+    font-size: 40px;
   }
 
   .ts-logo-tm {
-    font-size: 13px;
+    font-size: 15px;
 
-    top: -16px;
+    top: -19px;
   }
 
   .ts-nav-menu {
@@ -689,27 +732,29 @@ body {
   }
 
   .ts-nav-logo {
-    min-width: 240px;
+    min-width: 290px;
   }
 
+  /* KEEP DESKTOP LOGO SIZE */
+
   .ts-logo-brand {
-    font-size: 31px;
+    font-size: 40px;
   }
 
   .ts-logo-tm {
-    font-size: 12px;
+    font-size: 15px;
 
-    top: -14px;
+    top: -19px;
   }
 
   .ts-logo-certified {
-    font-size: 6px;
+    font-size: 7px;
   }
 
   .ts-logo-solutions {
-    font-size: 8px;
+    font-size: 9px;
 
-    padding: 4px 7px;
+    padding: 5px 9px;
   }
 }
 
@@ -721,41 +766,126 @@ body {
 @media (max-width: 850px) {
 
   .ts-nav .container {
-    width: min(100% - 28px, 1500px);
+    width: min(100% - 20px, 1500px);
   }
 
 
-  /* -----------------------------------------
+  /* =======================================================
      TOP BAR
-  ----------------------------------------- */
+     
+     EMAIL + PHONE BOTH VISIBLE
+  ======================================================= */
 
   .ts-nav-top-inner {
     min-height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 8px;
+
+    width: 100%;
   }
+
 
   .ts-nav-top-left {
-    gap: 0;
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    min-width: 0;
+
+    flex: 1;
   }
 
-  .ts-nav-top-left > span:first-child,
-  .ts-nav-separator,
+
+  /* DO NOT HIDE EMAIL */
+
   .ts-nav-top-left a {
-    display: none;
+    display: inline-flex;
+
+    align-items: center;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    font-size: 10px;
+
+    color: #ffffff;
   }
+
+
+  /* EMAIL ICON */
+
+  .ts-nav-top-left a i {
+    flex-shrink: 0;
+
+    font-size: 10px;
+
+    margin-right: 5px;
+  }
+
+
+  /* SEPARATOR */
+
+  .ts-nav-separator {
+    display: inline-block;
+
+    width: 1px;
+
+    height: 13px;
+
+    flex-shrink: 0;
+
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+
+  /* PHONE */
 
   .ts-nav-top-inner > a {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    flex-shrink: 0;
+
     margin-left: auto;
+
+    font-size: 10px;
+
+    color: #ffffff;
   }
+
+
+  .ts-nav-top-inner > a i {
+    font-size: 10px;
+
+    margin-right: 5px;
+  }
+
 
   .ts-nav-top span,
   .ts-nav-top a {
     font-size: 10px;
+
+    line-height: 1;
   }
 
 
-  /* -----------------------------------------
+  /* =======================================================
      MAIN HEADER
-  ----------------------------------------- */
+  ======================================================= */
 
   .ts-nav-inner {
     min-height: 78px;
@@ -764,44 +894,47 @@ body {
   }
 
 
-  /* -----------------------------------------
+  /* =======================================================
      LOGO
-  ----------------------------------------- */
+     DESKTOP SIZE MAINTAINED
+  ======================================================= */
 
   .ts-nav-logo {
-    min-width: auto;
+    min-width: 290px;
+
+    max-width: calc(100% - 58px);
   }
 
   .ts-logo-brand {
-    font-size: 28px;
+    font-size: 40px;
 
-    letter-spacing: 0.8px;
+    letter-spacing: 1.2px;
   }
 
   .ts-logo-tm {
-    font-size: 10px;
+    font-size: 15px;
 
-    top: -13px;
+    top: -19px;
 
-    margin-left: 3px;
+    margin-left: 5px;
   }
 
   .ts-logo-certified {
-    font-size: 5.5px;
+    font-size: 7px;
 
-    letter-spacing: 0.35px;
+    letter-spacing: 0.75px;
   }
 
   .ts-logo-solutions {
-    font-size: 7px;
+    font-size: 9px;
 
-    padding: 4px 6px;
+    padding: 5px 9px;
   }
 
 
-  /* -----------------------------------------
+  /* =======================================================
      MOBILE MENU
-  ----------------------------------------- */
+  ======================================================= */
 
   .ts-nav-menu {
     position: absolute;
@@ -845,9 +978,9 @@ body {
   }
 
 
-  /* -----------------------------------------
+  /* =======================================================
      OPEN MENU
-  ----------------------------------------- */
+  ======================================================= */
 
   .ts-nav-menu.open {
     opacity: 1;
@@ -860,9 +993,9 @@ body {
   }
 
 
-  /* -----------------------------------------
+  /* =======================================================
      MOBILE LINKS
-  ----------------------------------------- */
+  ======================================================= */
 
   .ts-nav-links {
     width: 100%;
@@ -900,9 +1033,9 @@ body {
   }
 
 
-  /* -----------------------------------------
+  /* =======================================================
      MOBILE CTA
-  ----------------------------------------- */
+  ======================================================= */
 
   .ts-nav-button {
     width: 100%;
@@ -915,12 +1048,33 @@ body {
   }
 
 
-  /* -----------------------------------------
+  /* =======================================================
      TOGGLE
-  ----------------------------------------- */
+  ======================================================= */
 
   .ts-nav-toggle {
     display: flex;
+  }
+
+
+  /* =======================================================
+     MOBILE ROOT GAP FIX
+     
+     TOP BAR    = 34px
+     MAIN NAV   = 78px
+     TOTAL      = 112px
+  ======================================================= */
+
+  #root {
+    padding-top: 112px !important;
+
+    margin-top: 0 !important;
+
+    margin-bottom: 0 !important;
+  }
+
+  #root > *:first-child {
+    margin-top: 0 !important;
   }
 }
 
@@ -932,50 +1086,101 @@ body {
 @media (max-width: 480px) {
 
   .ts-nav .container {
-    width: min(100% - 20px, 1500px);
+    width: min(100% - 16px, 1500px);
   }
 
   .ts-nav-inner {
-    min-height: 72px;
+    min-height: 78px;
   }
 
 
-  /* LOGO */
+  /* =======================================================
+     TOP BAR
+     EMAIL + PHONE
+  ======================================================= */
+
+  .ts-nav-top-inner {
+    gap: 6px;
+  }
+
+  .ts-nav-top-left {
+    gap: 6px;
+
+    flex: 1;
+
+    min-width: 0;
+  }
+
+  .ts-nav-top-left a {
+    font-size: 9px;
+
+    max-width: 145px;
+  }
+
+  .ts-nav-top-left a i {
+    font-size: 9px;
+
+    margin-right: 4px;
+  }
+
+  .ts-nav-separator {
+    height: 12px;
+  }
+
+  .ts-nav-top-inner > a {
+    font-size: 9px;
+  }
+
+  .ts-nav-top-inner > a i {
+    font-size: 9px;
+
+    margin-right: 4px;
+  }
+
+
+  /* =======================================================
+     LOGO
+     SAME DESKTOP SIZE
+  ======================================================= */
 
   .ts-logo-brand {
-    font-size: 24px;
+    font-size: 40px;
 
-    letter-spacing: 0.6px;
+    letter-spacing: 1.2px;
   }
 
   .ts-logo-tm {
-    font-size: 9px;
+    font-size: 15px;
 
-    top: -11px;
+    top: -19px;
+
+    margin-left: 5px;
   }
 
   .ts-logo-bottom {
-    gap: 4px;
+    gap: 8px;
 
-    margin-top: 5px;
+    margin-top: 7px;
   }
 
   .ts-logo-certified {
-    font-size: 5px;
+    font-size: 7px;
 
-    letter-spacing: 0.25px;
+    letter-spacing: 0.75px;
   }
 
   .ts-logo-solutions {
-    font-size: 6px;
+    font-size: 9px;
 
-    padding: 3px 5px;
+    padding: 5px 9px;
 
-    letter-spacing: 0.6px;
+    letter-spacing: 1px;
   }
 
 
-  /* TOGGLE */
+  /* =======================================================
+     TOGGLE
+  ======================================================= */
 
   .ts-nav-toggle {
     width: 42px;
@@ -984,6 +1189,21 @@ body {
 
   .ts-nav-toggle span {
     width: 19px;
+  }
+
+
+  /* =======================================================
+     ROOT GAP FIX
+  ======================================================= */
+
+  #root {
+    padding-top: 112px !important;
+
+    margin-top: 0 !important;
+  }
+
+  #root > *:first-child {
+    margin-top: 0 !important;
   }
 }
 
@@ -994,22 +1214,83 @@ body {
 
 @media (max-width: 360px) {
 
+  /* =======================================================
+     TOP BAR
+     KEEP EMAIL + PHONE VISIBLE
+  ======================================================= */
+
+  .ts-nav-top-inner {
+    gap: 4px;
+  }
+
+  .ts-nav-top-left {
+    gap: 4px;
+  }
+
+  .ts-nav-top-left a {
+    font-size: 8px;
+
+    max-width: 125px;
+  }
+
+  .ts-nav-top-inner > a {
+    font-size: 8px;
+  }
+
+  .ts-nav-top-left a i,
+  .ts-nav-top-inner > a i {
+    font-size: 8px;
+
+    margin-right: 3px;
+  }
+
+
+  /* =======================================================
+     SAME DESKTOP LOGO SIZE
+  ======================================================= */
+
   .ts-logo-brand {
-    font-size: 21px;
+    font-size: 40px;
   }
 
   .ts-logo-tm {
-    font-size: 8px;
+    font-size: 15px;
 
-    top: -10px;
+    top: -19px;
   }
 
   .ts-logo-certified {
-    font-size: 4.5px;
+    font-size: 7px;
   }
 
   .ts-logo-solutions {
-    font-size: 5.5px;
+    font-size: 9px;
+  }
+
+
+  /* =======================================================
+     ROOT GAP FIX
+  ======================================================= */
+
+  #root {
+    padding-top: 112px !important;
   }
 }
- 
+
+
+/* =========================================================
+   FINAL MOBILE WHITE GAP SAFETY FIX
+========================================================= */
+
+@media (max-width: 850px) {
+
+  body > #root {
+    margin-top: 0 !important;
+
+    padding-top: 112px !important;
+  }
+
+  .ts-nav + * {
+    margin-top: 0 !important;
+  }
+}
