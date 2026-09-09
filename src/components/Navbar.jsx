@@ -1,4 +1,4 @@
- import React, { useState } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
@@ -24,23 +24,30 @@ export default function Navbar() {
 
           <div className="ts-nav-top-left">
 
-            <span>
+            <span className="ts-nav-top-item">
               <i className="fa-solid fa-shield-halved"></i>
-              Fire Safety & Protection Solutions
+              <span>Fire Safety & Protection Solutions</span>
             </span>
 
             <span className="ts-nav-separator"></span>
 
-            <a href="mailto:sales@technosafe.in">
+            <a
+              href="mailto:sales@technosafe.in"
+              className="ts-nav-top-item"
+            >
               <i className="fa-solid fa-envelope"></i>
-              sales@technosafe.in
+              <span>sales@technosafe.in</span>
             </a>
 
           </div>
 
-          <a href="tel:+919813055906">
+
+          <a
+            href="tel:+919813055906"
+            className="ts-nav-top-item"
+          >
             <i className="fa-solid fa-phone"></i>
-            +91 98130 55906
+            <span>+91 98130 55906</span>
           </a>
 
         </div>
@@ -65,11 +72,26 @@ export default function Navbar() {
 
             <div className="ts-logo-text">
 
+              {/* =================================================
+                  TECHNOSAFE WORDMARK
+              ================================================= */}
               <div className="ts-logo-brand">
-                TECHNOSAFE
-                <span className="ts-logo-tm">™</span>
+
+                <span className="ts-logo-brand-name">
+                  TECHNOSAFE
+                </span>
+
+                {/* TM stays inside brand but is ABSOLUTE */}
+                <span className="ts-logo-tm">
+                  ™
+                </span>
+
               </div>
 
+
+              {/* =================================================
+                  LOGO BOTTOM
+              ================================================= */}
               <div className="ts-logo-bottom">
 
                 <span className="ts-logo-certified">
@@ -119,7 +141,7 @@ export default function Navbar() {
               className="ts-nav-button"
               onClick={() => setOpen(false)}
             >
-              Get Safety Audit
+              <span>Get Safety Audit</span>
               <i className="fa-solid fa-arrow-right"></i>
             </NavLink>
 
@@ -148,4 +170,3 @@ export default function Navbar() {
     </header>
   );
 }
- 
