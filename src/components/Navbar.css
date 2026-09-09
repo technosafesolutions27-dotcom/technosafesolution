@@ -1,5 +1,6 @@
 /* =========================================================
    TECHNOSAFE NAVBAR
+   FINAL RESPONSIVE VERSION
 ========================================================= */
 
 :root {
@@ -18,7 +19,7 @@
 
 
 /* =========================================================
-   GLOBAL
+   GLOBAL RESET
 ========================================================= */
 
 html,
@@ -153,7 +154,7 @@ body {
 
 
 /* =========================================================
-   MAIN NAV
+   MAIN NAVIGATION
 ========================================================= */
 
 .ts-nav-main {
@@ -185,6 +186,7 @@ body {
   display: block;
 
   width: max-content;
+
   max-width: max-content;
 
   flex: 0 0 auto;
@@ -194,6 +196,7 @@ body {
   text-decoration: none;
 
   margin: 0;
+
   padding: 0;
 
   min-width: 0;
@@ -201,7 +204,7 @@ body {
 
 
 /* =========================================================
-   LOGO WRAPPER
+   LOGO MAIN WRAPPER
 ========================================================= */
 
 .ts-logo-text {
@@ -214,6 +217,7 @@ body {
   max-width: max-content;
 
   margin: 0;
+
   padding: 0;
 
   flex-shrink: 0;
@@ -222,6 +226,7 @@ body {
 
 /* =========================================================
    TECHNOSAFE
+   SAME SIZE
 ========================================================= */
 
 .ts-logo-brand {
@@ -234,6 +239,7 @@ body {
   max-width: max-content;
 
   margin: 0;
+
   padding: 0;
 
   font-family: "Outfit", Arial, sans-serif;
@@ -253,6 +259,11 @@ body {
   text-transform: uppercase;
 }
 
+
+/* =========================================================
+   TECHNOSAFE NAME
+========================================================= */
+
 .ts-logo-brand-name {
   display: block;
 
@@ -261,17 +272,20 @@ body {
   max-width: max-content;
 
   margin: 0;
+
   padding: 0;
 
   color: #ffffff;
 
+  font-family: "Outfit", Arial, sans-serif;
+
   font-size: 52px;
+
+  line-height: 0.95;
 
   font-weight: 950;
 
   letter-spacing: 1px;
-
-  line-height: 0.95;
 
   white-space: nowrap;
 }
@@ -279,6 +293,7 @@ body {
 
 /* =========================================================
    TM
+   DOES NOT AFFECT LOGO WIDTH
 ========================================================= */
 
 .ts-logo-tm {
@@ -295,6 +310,7 @@ body {
   max-width: max-content;
 
   margin: 0;
+
   padding: 0;
 
   color: #ffffff;
@@ -316,7 +332,7 @@ body {
 
 
 /* =========================================================
-   BOTTOM LOGO ROW
+   LOGO BOTTOM
 ========================================================= */
 
 .ts-logo-bottom {
@@ -326,20 +342,14 @@ body {
 
   align-items: center;
 
-  justify-content: space-between;
-
   width: 100%;
 
   height: 38px;
 
-  margin: 7px 0 0;
+  margin: 7px 0 0 0;
 
   padding: 0;
 
-  /*
-     IMPORTANT:
-     Everything stays inside TECHNOSAFE width.
-  */
   min-width: 0;
 
   overflow: visible;
@@ -349,7 +359,8 @@ body {
 /* =========================================================
    ISO CERTIFIED COMPANY
 
-   DESKTOP
+   SAME SIZE
+   SAME VISUAL WEIGHT
 ========================================================= */
 
 .ts-logo-certified {
@@ -360,10 +371,6 @@ body {
   flex: 1 1 auto;
 
   min-width: 0;
-
-  width: auto;
-
-  max-width: none;
 
   margin: 0;
 
@@ -392,7 +399,8 @@ body {
 
 
 /* =========================================================
-   SOLUTIONS RED BADGE
+   SOLUTIONS
+   SAME SIZE
 ========================================================= */
 
 .ts-logo-solutions {
@@ -435,11 +443,13 @@ body {
   text-align: center;
 
   z-index: 3;
+
+  box-sizing: border-box;
 }
 
 
 /* =========================================================
-   NAV MENU
+   NAVIGATION MENU
 ========================================================= */
 
 .ts-nav-menu {
@@ -526,7 +536,7 @@ body {
 
 
 /* =========================================================
-   CTA
+   CTA BUTTON
 ========================================================= */
 
 .ts-nav-button {
@@ -595,6 +605,7 @@ body {
   height: 52px;
 
   padding: 0;
+
   margin: 0;
 
   background: #080808;
@@ -668,7 +679,7 @@ body {
 
 
 /* =========================================================
-   MOBILE NAV
+   MOBILE NAVIGATION
 ========================================================= */
 
 @media (max-width: 900px) {
@@ -681,6 +692,7 @@ body {
     top: 100%;
 
     left: 0;
+
     right: 0;
 
     width: 100%;
@@ -753,15 +765,13 @@ body {
 
     min-width: 0;
   }
-
-  #root {
-    padding-top: 132px;
-  }
 }
 
 
 /* =========================================================
-   MOBILE 700
+   MOBILE 700px
+
+   KEEP SAME LOGO SIZE
 ========================================================= */
 
 @media (max-width: 700px) {
@@ -804,6 +814,10 @@ body {
     gap: 12px;
   }
 
+  /* ==============================
+     SAME LOGO SIZE
+  ============================== */
+
   .ts-logo-brand,
   .ts-logo-brand-name {
     font-size: 52px;
@@ -817,22 +831,54 @@ body {
     top: -3px;
   }
 
+  /* ==============================
+     BOTTOM ROW
+  ============================== */
+
   .ts-logo-bottom {
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
     height: 38px;
 
     margin-top: 7px;
+
+    min-width: 0;
+
+    overflow: visible;
   }
 
   .ts-logo-certified {
+    flex: 1 1 auto;
+
+    min-width: 0;
+
     font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
   }
 
   .ts-logo-solutions {
-    font-size: 18px;
+    flex: 0 0 auto;
+
+    margin-left: 10px;
 
     padding: 8px 15px;
 
-    margin-left: 8px;
+    font-size: 18px;
+
+    border-radius: 5px;
+
+    white-space: nowrap;
   }
 
   .ts-nav-toggle {
@@ -844,7 +890,11 @@ body {
 
 
 /* =========================================================
-   MOBILE 520
+   MOBILE 520px
+
+   IMPORTANT:
+   SAME LOGO SIZE
+   SAME SPACING
 ========================================================= */
 
 @media (max-width: 520px) {
@@ -889,243 +939,40 @@ body {
     align-items: center;
   }
 
+
   /* =====================================================
-     KEEP TECHNOSAFE LARGE
+     TECHNOSAFE
+     DO NOT CHANGE SIZE
   ===================================================== */
 
   .ts-logo-brand,
   .ts-logo-brand-name {
-    font-size: 52px;
-  }
+    font-size: 52px !important;
 
-  .ts-logo-tm {
-    font-size: 15px;
+    font-weight: 950 !important;
 
-    left: calc(100% + 6px);
-
-    top: -3px;
+    letter-spacing: 1px !important;
   }
 
 
   /* =====================================================
-     IMPORTANT MOBILE FIX
+     TM
+  ===================================================== */
 
-     BOTTOM ROW NOW USES REAL FLEX SPACE.
-     ISO CANNOT GO UNDER SOLUTIONS.
+  .ts-logo-tm {
+    font-size: 15px !important;
+
+    left: calc(100% + 7px) !important;
+
+    top: -3px !important;
+  }
+
+
+  /* =====================================================
+     BOTTOM ROW
   ===================================================== */
 
   .ts-logo-bottom {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: flex-start;
-
-    width: 100%;
-
-    height: 40px;
-
-    margin-top: 7px;
-
-    min-width: 0;
-
-    overflow: visible;
-  }
-
-  .ts-logo-certified {
-    position: relative;
-
-    left: auto;
-    top: auto;
-
-    transform: none;
-
-    flex: 1 1 auto;
-
-    min-width: 0;
-
-    width: auto;
-
-    max-width: none;
-
-    font-size: 13px;
-
-    line-height: 1;
-
-    font-weight: 700;
-
-    white-space: nowrap;
-
-    overflow: hidden;
-
-    text-overflow: clip;
-  }
-
-  .ts-logo-solutions {
-    position: relative;
-
-    right: auto;
-    top: auto;
-
-    transform: none;
-
-    flex: 0 0 auto;
-
-    margin-left: 8px;
-
-    padding: 7px 12px;
-
-    font-size: 16px;
-
-    line-height: 1;
-
-    border-radius: 5px;
-
-    white-space: nowrap;
-  }
-
-  .ts-nav-toggle {
-    width: 50px;
-
-    height: 50px;
-
-    flex: 0 0 50px;
-  }
-
-  #root {
-    padding-top: 126px;
-  }
-}
-
-
-/* =========================================================
-   MOBILE 430
-========================================================= */
-
-@media (max-width: 430px) {
-
-  .ts-nav .container {
-    width: calc(100% - 12px);
-  }
-
-  .ts-nav-inner {
-    gap: 7px;
-  }
-
-  .ts-logo-brand,
-  .ts-logo-brand-name {
-    font-size: 52px;
-  }
-
-  .ts-logo-tm {
-    font-size: 14px;
-
-    left: calc(100% + 6px);
-
-    top: -3px;
-  }
-
-  .ts-logo-bottom {
-    height: 39px;
-
-    margin-top: 7px;
-  }
-
-  .ts-logo-certified {
-    font-size: 12px;
-
-    letter-spacing: 0;
-  }
-
-  .ts-logo-solutions {
-    margin-left: 6px;
-
-    padding: 7px 10px;
-
-    font-size: 15px;
-  }
-
-  .ts-nav-toggle {
-    width: 48px;
-
-    height: 48px;
-
-    flex-basis: 48px;
-  }
-}
-
-
-/* =========================================================
-   MOBILE 380
-========================================================= */
-
-@media (max-width: 380px) {
-
-  .ts-nav .container {
-    width: calc(100% - 10px);
-  }
-
-  .ts-nav-inner {
-    gap: 5px;
-  }
-
-  .ts-logo-brand,
-  .ts-logo-brand-name {
-    font-size: 52px;
-  }
-
-  .ts-logo-tm {
-    font-size: 13px;
-
-    left: calc(100% + 5px);
-  }
-
-  .ts-logo-bottom {
-    height: 38px;
-
-    margin-top: 6px;
-  }
-
-  .ts-logo-certified {
-    font-size: 11px;
-
-    letter-spacing: 0;
-  }
-
-  .ts-logo-solutions {
-    margin-left: 5px;
-
-    padding: 6px 8px;
-
-    font-size: 14px;
-
-    border-radius: 4px;
-  }
-
-  .ts-nav-toggle {
-    width: 46px;
-
-    height: 46px;
-
-    flex-basis: 46px;
-  }
-}
-
-
-/* =========================================================
-   🔥 FINAL SAFETY OVERRIDES
-========================================================= */
-
-/*
-   Prevent any accidental absolute positioning
-   of the bottom logo items on mobile.
-*/
-
-@media (max-width: 520px) {
-
-  .ts-logo-bottom {
-    position: relative !important;
-
     display: flex !important;
 
     align-items: center !important;
@@ -1134,12 +981,22 @@ body {
 
     width: 100% !important;
 
+    height: 38px !important;
+
+    margin-top: 7px !important;
+
     min-width: 0 !important;
 
     max-width: 100% !important;
 
     overflow: visible !important;
   }
+
+
+  /* =====================================================
+     ISO
+     SAME 14PX
+  ===================================================== */
 
   .ts-logo-certified {
     position: relative !important;
@@ -1162,10 +1019,30 @@ body {
 
     max-width: none !important;
 
-    overflow: hidden !important;
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    font-size: 14px !important;
+
+    line-height: 1.1 !important;
+
+    font-weight: 700 !important;
+
+    letter-spacing: 0.15px !important;
 
     white-space: nowrap !important;
+
+    overflow: hidden !important;
+
+    text-overflow: clip !important;
   }
+
+
+  /* =====================================================
+     SOLUTIONS
+     SAME 18PX
+  ===================================================== */
 
   .ts-logo-solutions {
     position: relative !important;
@@ -1186,43 +1063,231 @@ body {
 
     max-width: max-content !important;
 
-    margin-left: 8px !important;
+    margin: 0 0 0 10px !important;
+
+    padding: 8px 15px !important;
+
+    font-size: 18px !important;
+
+    line-height: 1 !important;
+
+    font-weight: 900 !important;
+
+    border-radius: 5px !important;
 
     white-space: nowrap !important;
 
     z-index: 5 !important;
   }
+
+
+  /* =====================================================
+     HAMBURGER
+  ===================================================== */
+
+  .ts-nav-toggle {
+    width: 52px;
+
+    height: 52px;
+
+    flex: 0 0 52px;
+  }
+
+  #root {
+    padding-top: 126px;
+  }
 }
 
 
 /* =========================================================
-   DESKTOP FINAL ALIGNMENT
+   MOBILE 430px
+
+   KEEP EVERYTHING SAME
 ========================================================= */
 
-@media (min-width: 521px) {
+@media (max-width: 430px) {
+
+  .ts-nav .container {
+    width: calc(100% - 12px);
+  }
+
+  .ts-nav-inner {
+    gap: 7px;
+  }
+
+
+  .ts-logo-brand,
+  .ts-logo-brand-name {
+    font-size: 52px !important;
+
+    font-weight: 950 !important;
+
+    letter-spacing: 1px !important;
+  }
+
+
+  .ts-logo-tm {
+    font-size: 15px !important;
+
+    left: calc(100% + 7px) !important;
+
+    top: -3px !important;
+  }
+
 
   .ts-logo-bottom {
-    position: relative !important;
+    height: 38px !important;
 
+    margin-top: 7px !important;
+  }
+
+
+  .ts-logo-certified {
+    font-size: 14px !important;
+
+    font-weight: 700 !important;
+
+    letter-spacing: 0.15px !important;
+  }
+
+
+  .ts-logo-solutions {
+    margin-left: 10px !important;
+
+    padding: 8px 15px !important;
+
+    font-size: 18px !important;
+
+    font-weight: 900 !important;
+
+    border-radius: 5px !important;
+  }
+
+
+  .ts-nav-toggle {
+    width: 50px;
+
+    height: 50px;
+
+    flex-basis: 50px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE 380px
+
+   SAME LOGO APPEARANCE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .ts-nav .container {
+    width: calc(100% - 10px);
+  }
+
+  .ts-nav-inner {
+    gap: 5px;
+  }
+
+
+  .ts-logo-brand,
+  .ts-logo-brand-name {
+    font-size: 52px !important;
+
+    font-weight: 950 !important;
+
+    letter-spacing: 1px !important;
+  }
+
+
+  .ts-logo-tm {
+    font-size: 15px !important;
+
+    left: calc(100% + 6px) !important;
+
+    top: -3px !important;
+  }
+
+
+  .ts-logo-bottom {
+    height: 38px !important;
+
+    margin-top: 7px !important;
+  }
+
+
+  .ts-logo-certified {
+    font-size: 14px !important;
+
+    font-weight: 700 !important;
+
+    letter-spacing: 0.15px !important;
+  }
+
+
+  .ts-logo-solutions {
+    margin-left: 10px !important;
+
+    padding: 8px 15px !important;
+
+    font-size: 18px !important;
+
+    font-weight: 900 !important;
+
+    border-radius: 5px !important;
+  }
+
+
+  .ts-nav-toggle {
+    width: 48px;
+
+    height: 48px;
+
+    flex-basis: 48px;
+  }
+}
+
+
+/* =========================================================
+   🔥 FINAL OVERLAP PROTECTION
+========================================================= */
+
+/*
+   ISO and SOLUTIONS are always separate flex items.
+   SOLUTIONS never sits on top of ISO.
+*/
+
+.ts-logo-bottom {
+  box-sizing: border-box;
+}
+
+.ts-logo-certified,
+.ts-logo-solutions {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MOBILE FINAL FORCE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .ts-logo-bottom {
     display: flex !important;
+
+    flex-direction: row !important;
 
     align-items: center !important;
 
     justify-content: flex-start !important;
 
-    width: 100% !important;
-
-    min-width: 0 !important;
+    position: relative !important;
   }
 
   .ts-logo-certified {
     position: relative !important;
-
-    left: auto !important;
-
-    top: auto !important;
-
-    transform: none !important;
 
     flex: 1 1 auto !important;
 
@@ -1232,24 +1297,32 @@ body {
 
     max-width: none !important;
 
-    overflow: hidden !important;
+    transform: none !important;
 
-    white-space: nowrap !important;
-  }
-
-  .ts-logo-solutions {
-    position: relative !important;
+    left: auto !important;
 
     right: auto !important;
 
     top: auto !important;
 
-    transform: none !important;
+    bottom: auto !important;
+  }
+
+  .ts-logo-solutions {
+    position: relative !important;
 
     flex: 0 0 auto !important;
 
-    margin-left: 10px !important;
+    transform: none !important;
 
-    white-space: nowrap !important;
+    left: auto !important;
+
+    right: auto !important;
+
+    top: auto !important;
+
+    bottom: auto !important;
+
+    margin-left: 10px !important;
   }
 }
