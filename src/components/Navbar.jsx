@@ -61,7 +61,7 @@ export default function Navbar() {
         <div className="container ts-nav-inner">
 
           {/* =====================================================
-              TEXT LOGO
+              LOGO
           ===================================================== */}
           <NavLink
             to="/"
@@ -71,9 +71,7 @@ export default function Navbar() {
 
             <div className="ts-logo-text">
 
-              {/* =================================================
-                  TECHNOSAFE BRAND
-              ================================================= */}
+              {/* TECHNOSAFE */}
               <div className="ts-logo-brand">
 
                 <span className="ts-logo-brand-name">
@@ -87,9 +85,7 @@ export default function Navbar() {
               </div>
 
 
-              {/* =================================================
-                  CERTIFICATION + SOLUTIONS
-              ================================================= */}
+              {/* CERTIFICATION + SOLUTIONS */}
               <div className="ts-logo-bottom">
 
                 <span className="ts-logo-certified">
@@ -108,7 +104,7 @@ export default function Navbar() {
 
 
           {/* =====================================================
-              NAVIGATION MENU
+              DESKTOP / MOBILE MENU
           ===================================================== */}
           <div className={`ts-nav-menu ${open ? "open" : ""}`}>
 
@@ -131,9 +127,7 @@ export default function Navbar() {
             </div>
 
 
-            {/* =================================================
-                CTA BUTTON
-            ================================================= */}
+            {/* CTA */}
             <NavLink
               to="/contact"
               className="ts-nav-button"
@@ -147,7 +141,7 @@ export default function Navbar() {
 
 
           {/* =====================================================
-              MOBILE MENU BUTTON
+              MOBILE TOGGLE
           ===================================================== */}
           <button
             type="button"
