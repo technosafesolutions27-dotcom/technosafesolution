@@ -1,91 +1,61 @@
 /* =========================================================
    TECHNOSAFE NAVBAR
-   FULL UPDATED CSS
-========================================================= */
-
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap");
-
-
-/* =========================================================
-   ROOT VARIABLES
 ========================================================= */
 
 :root {
-    --ts-black: #050505;
-    --ts-black-2: #0b0b0b;
+  --ts-black: #050505;
+  --ts-black-2: #0b0b0b;
 
-    --ts-red: #e50914;
-    --ts-red-dark: #b90710;
-    --ts-light-red: #ff5c63;
+  --ts-red: #e50914;
+  --ts-red-dark: #b90710;
+  --ts-light-red: #ff5c63;
 
-    --ts-white: #ffffff;
-    --ts-white-soft: #eeeeee;
+  --ts-white: #ffffff;
+  --ts-white-soft: #eeeeee;
 
-    --ts-border: rgba(255, 255, 255, 0.12);
+  --ts-border: rgba(255, 255, 255, 0.12);
 }
 
 
 /* =========================================================
-   GLOBAL RESET
+   GLOBAL
 ========================================================= */
 
 html,
 body {
-    margin: 0 !important;
-    padding: 0 !important;
-
-    width: 100%;
-    min-height: 100%;
-
-    overflow-x: hidden;
-
-    background: #000000 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  background: #000000 !important;
 }
-
-* {
-    box-sizing: border-box;
-}
-
-a,
-button,
-input,
-textarea,
-select {
-    font-family: "Outfit", Arial, sans-serif;
-}
-
-
-/* =========================================================
-   ROOT OFFSET
-========================================================= */
 
 #root {
-    padding-top: 132px;
+  padding-top: 132px;
 }
 
 
 /* =========================================================
-   MAIN NAV
+   NAVBAR
 ========================================================= */
 
 .ts-nav {
-    position: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 
-    top: 0;
-    left: 0;
-    right: 0;
+  width: 100%;
 
-    width: 100%;
+  z-index: 9999;
 
-    z-index: 9999;
+  background: var(--ts-black);
+  color: var(--ts-white);
 
-    background: var(--ts-black);
+  font-family: "Outfit", Arial, sans-serif;
 
-    color: var(--ts-white);
-
-    font-family: "Outfit", Arial, sans-serif;
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 
@@ -94,9 +64,8 @@ select {
 ========================================================= */
 
 .ts-nav .container {
-    width: min(100% - 32px, 1500px);
-
-    margin: 0 auto;
+  width: min(100% - 32px, 1500px);
+  margin: 0 auto;
 }
 
 
@@ -105,135 +74,98 @@ select {
 ========================================================= */
 
 .ts-nav-top {
-    width: 100%;
+  min-height: 40px;
 
-    min-height: 40px;
+  background: #050505;
 
-    background: #050505;
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 }
-
-
-/* =========================================================
-   TOP BAR INNER
-========================================================= */
 
 .ts-nav-top-inner {
-    min-height: 40px;
+  min-height: 40px;
 
-    display: flex;
+  display: flex;
 
-    align-items: center;
+  align-items: center;
 
-    justify-content: space-between;
+  justify-content: space-between;
 
-    gap: 20px;
+  gap: 20px;
 }
-
-
-/* =========================================================
-   TOP BAR LEFT
-========================================================= */
 
 .ts-nav-top-left {
-    display: flex;
+  display: flex;
 
-    align-items: center;
+  align-items: center;
 
-    gap: 10px;
+  gap: 10px;
 
-    min-width: 0;
+  min-width: 0;
 }
-
-
-/* =========================================================
-   TOP BAR ITEM
-========================================================= */
 
 .ts-nav-top-item {
-    display: inline-flex;
+  display: inline-flex;
 
-    align-items: center;
+  align-items: center;
 
-    gap: 7px;
+  gap: 7px;
 
-    color: #ffffff;
+  color: #ffffff;
 
-    font-size: 12px;
+  font-size: 12px;
 
-    line-height: 1;
+  line-height: 1;
 
-    font-weight: 500;
+  font-weight: 500;
 
-    white-space: nowrap;
+  white-space: nowrap;
 
-    text-decoration: none;
-
-    transition: color 0.2s ease;
+  text-decoration: none;
 }
-
 
 .ts-nav-top-item:hover {
-    color: var(--ts-light-red);
+  color: var(--ts-light-red);
 }
-
-
-/* =========================================================
-   TOP BAR ICON
-========================================================= */
 
 .ts-nav-top-item i {
-    color: var(--ts-red);
+  color: var(--ts-red);
 
-    font-size: 12px;
+  font-size: 12px;
 
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
-
-
-/* =========================================================
-   SEPARATOR
-========================================================= */
 
 .ts-nav-separator {
-    width: 1px;
+  width: 1px;
 
-    height: 18px;
+  height: 18px;
 
-    display: block;
+  background: rgba(255, 255, 255, 0.16);
 
-    background: rgba(255, 255, 255, 0.16);
-
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 
 /* =========================================================
-   MAIN NAVIGATION
+   MAIN NAV
 ========================================================= */
 
 .ts-nav-main {
-    width: 100%;
+  width: 100%;
 
-    background: var(--ts-black);
+  background: var(--ts-black);
 }
 
-
-/* =========================================================
-   MAIN NAV INNER
-========================================================= */
-
 .ts-nav-inner {
-    min-height: 92px;
+  min-height: 92px;
 
-    display: flex;
+  display: flex;
 
-    align-items: center;
+  align-items: center;
 
-    justify-content: space-between;
+  justify-content: space-between;
 
-    gap: 28px;
+  gap: 28px;
 }
 
 
@@ -242,381 +174,348 @@ select {
 ========================================================= */
 
 .ts-nav-logo {
-    display: block;
+  display: block;
 
-    width: max-content;
+  width: max-content;
+  max-width: max-content;
 
-    max-width: max-content;
+  flex-shrink: 0;
 
-    flex-shrink: 0;
+  color: #ffffff;
 
-    color: #ffffff;
+  text-decoration: none;
 
-    text-decoration: none;
-
-    margin: 0;
-
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 
 /* =========================================================
-   LOGO MAIN WRAPPER
-
-   IMPORTANT:
-   This width is based ONLY on TECHNOSAFE.
+   LOGO TEXT WRAPPER
 ========================================================= */
 
 .ts-logo-text {
-    position: relative;
+  position: relative;
 
-    display: block;
+  display: block;
 
-    width: max-content;
+  width: max-content;
+  max-width: max-content;
 
-    max-width: max-content;
+  margin: 0;
+  padding: 0;
 
-    margin: 0;
-
-    padding: 0;
-
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 
 /* =========================================================
-   TECHNOSAFE BRAND ROW
-
-   IMPORTANT:
-   TM is absolute.
-   Therefore TM DOES NOT affect this width.
+   TECHNOSAFE BRAND
 ========================================================= */
 
 .ts-logo-brand {
-    position: relative;
+  position: relative;
 
-    display: block;
+  display: block;
 
-    width: max-content;
+  width: max-content;
+  max-width: max-content;
 
-    max-width: max-content;
+  margin: 0;
+  padding: 0;
 
-    margin: 0;
+  font-family: "Outfit", Arial, sans-serif;
 
-    padding: 0;
+  font-size: 52px;
 
-    font-family: "Outfit", Arial, sans-serif;
+  line-height: 0.95;
 
-    font-size: 46px;
+  font-weight: 950;
 
-    line-height: 0.95;
+  letter-spacing: 1px;
 
-    font-weight: 950;
+  color: #ffffff;
 
-    letter-spacing: 1px;
+  white-space: nowrap;
 
-    color: #ffffff;
-
-    white-space: nowrap;
-
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 
 /* =========================================================
-   TECHNOSAFE ACTUAL TEXT
-
-   THIS is what determines the width.
+   TECHNOSAFE NAME
 ========================================================= */
 
 .ts-logo-brand-name {
-    display: block;
+  display: block;
 
-    width: max-content;
+  width: max-content;
+  max-width: max-content;
 
-    max-width: max-content;
+  margin: 0;
+  padding: 0;
 
-    margin: 0;
+  color: #ffffff;
 
-    padding: 0;
+  font-size: 52px;
 
-    color: #ffffff;
+  font-weight: 950;
 
-    white-space: nowrap;
+  letter-spacing: 1px;
+
+  line-height: 0.95;
+
+  white-space: nowrap;
 }
 
 
 /* =========================================================
-   TRADEMARK
-
-   🔥 CRITICAL FIX 🔥
-
-   TM is absolute relative to .ts-logo-brand.
-
-   So:
-   TECHNOSAFE width = actual text width
-   TM width = NOT INCLUDED
+   TM
+   IMPORTANT:
+   TM DOES NOT CHANGE TECHNOSAFE WIDTH
 ========================================================= */
 
 .ts-logo-tm {
-    position: absolute;
+  position: absolute;
 
-    left: calc(100% + 6px);
+  left: calc(100% + 7px);
 
-    top: -2px;
+  top: -3px;
 
-    display: block;
+  display: block;
 
-    width: max-content;
+  width: max-content;
+  max-width: max-content;
 
-    max-width: max-content;
+  margin: 0;
+  padding: 0;
 
-    margin: 0;
+  color: #ffffff;
 
-    padding: 0;
+  font-family: "Outfit", Arial, sans-serif;
 
-    color: #ffffff;
+  font-size: 15px;
 
-    font-family: "Outfit", Arial, sans-serif;
+  line-height: 1;
 
-    font-size: 15px;
+  font-weight: 800;
 
-    line-height: 1;
+  white-space: nowrap;
 
-    font-weight: 800;
+  z-index: 10;
 
-    white-space: nowrap;
-
-    z-index: 10;
-
-    pointer-events: none;
+  pointer-events: none;
 }
 
 
 /* =========================================================
    LOGO BOTTOM
-
-   🔥 CRITICAL 🔥
-
-   100% = EXACT WIDTH OF TECHNOSAFE
 ========================================================= */
 
 .ts-logo-bottom {
-    position: relative;
+  position: relative;
 
-    display: block;
+  display: block;
 
-    width: 100%;
+  width: 100%;
+  max-width: 100%;
 
-    max-width: 100%;
+  height: 38px;
 
-    height: 36px;
+  margin: 7px 0 0 0;
 
-    margin: 7px 0 0 0;
+  padding: 0;
 
-    padding: 0;
+  overflow: visible;
 }
 
 
 /* =========================================================
-   ISO CERTIFIED TEXT
+   ISO CERTIFICATION TEXT
+
+   BIGGER
+   EXTENDS UP TO THE RED SOLUTIONS AREA
 ========================================================= */
 
 .ts-logo-certified {
-    position: absolute;
+  position: absolute;
 
-    left: 0;
+  left: 0;
 
-    top: 50%;
+  top: 50%;
 
-    transform: translateY(-50%);
+  transform: translateY(-50%);
 
-    display: block;
+  display: block;
 
-    width: max-content;
+  width: calc(100% - 135px);
 
-    max-width: max-content;
+  max-width: calc(100% - 135px);
 
-    margin: 0;
+  margin: 0;
 
-    padding: 0;
+  padding: 0;
 
-    color: #eeeeee;
+  color: #eeeeee;
 
-    font-family: "Outfit", Arial, sans-serif;
+  font-family: "Outfit", Arial, sans-serif;
 
-    font-size: 10px;
+  /*
+     INCREASED SIZE
+  */
+  font-size: 14px;
 
-    line-height: 1.1;
+  line-height: 1.1;
 
-    font-weight: 600;
+  font-weight: 700;
 
-    letter-spacing: 0.1px;
+  letter-spacing: 0.15px;
 
-    white-space: nowrap;
+  white-space: nowrap;
 
-    z-index: 1;
+  overflow: hidden;
+
+  text-overflow: clip;
+
+  z-index: 1;
 }
 
 
 /* =========================================================
    SOLUTIONS RED BADGE
 
-   ========================================================
-   🔥🔥🔥 EXACT ALIGNMENT FIX 🔥🔥🔥
-
-   right: 0
-
-   means the right edge of the red box is EXACTLY
-   the right edge of TECHNOSAFE.
-
-   TM is NOT included in width.
+   RIGHT EDGE LOCKED TO TECHNOSAFE "E"
 ========================================================= */
 
 .ts-logo-solutions {
-    position: absolute;
+  position: absolute;
 
-    right: 0;
+  right: 0;
 
-    top: 50%;
+  left: auto;
 
-    transform: translateY(-50%);
+  top: 50%;
 
-    display: block;
+  transform: translateY(-50%);
 
-    width: max-content;
+  display: block;
 
-    max-width: max-content;
+  width: max-content;
 
-    margin: 0;
+  max-width: max-content;
 
-    padding: 8px 15px;
+  margin: 0;
 
-    color: #ffffff;
+  padding: 8px 15px;
 
-    background: var(--ts-red);
+  color: #ffffff;
 
-    border-radius: 5px;
+  background: var(--ts-red);
 
-    font-family: "Outfit", Arial, sans-serif;
+  border-radius: 5px;
 
-    font-size: 18px;
+  font-family: "Outfit", Arial, sans-serif;
 
-    line-height: 1;
+  font-size: 18px;
 
-    font-weight: 900;
+  line-height: 1;
 
-    letter-spacing: 0;
+  font-weight: 900;
 
-    white-space: nowrap;
+  letter-spacing: 0;
 
-    text-align: center;
+  white-space: nowrap;
 
-    z-index: 3;
+  text-align: center;
+
+  z-index: 3;
 }
 
 
 /* =========================================================
-   NAVIGATION MENU
+   NAV MENU
 ========================================================= */
 
 .ts-nav-menu {
-    display: flex;
+  display: flex;
 
-    align-items: center;
+  align-items: center;
 
-    justify-content: flex-end;
+  justify-content: flex-end;
 
-    gap: 30px;
+  gap: 30px;
 
-    margin-left: auto;
+  margin-left: auto;
 
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 
 /* =========================================================
-   NAV LINKS WRAPPER
+   NAV LINKS
 ========================================================= */
 
 .ts-nav-links {
-    display: flex;
+  display: flex;
 
-    align-items: center;
+  align-items: center;
 
-    gap: 28px;
+  gap: 28px;
 }
-
-
-/* =========================================================
-   NAV LINK
-========================================================= */
 
 .ts-nav-link {
-    position: relative;
+  position: relative;
 
-    display: inline-flex;
+  display: inline-flex;
 
-    align-items: center;
+  align-items: center;
 
-    justify-content: center;
+  justify-content: center;
 
-    padding: 8px 0;
+  padding: 8px 0;
 
-    color: #ffffff;
+  color: #ffffff;
 
-    font-size: 14px;
+  font-size: 14px;
 
-    line-height: 1;
+  line-height: 1;
 
-    font-weight: 600;
+  font-weight: 600;
 
-    text-decoration: none;
+  text-decoration: none;
 
-    white-space: nowrap;
+  white-space: nowrap;
 
-    transition:
-        color 0.25s ease,
-        opacity 0.25s ease;
+  transition:
+    color 0.25s ease,
+    opacity 0.25s ease;
 }
-
 
 .ts-nav-link::after {
-    content: "";
+  content: "";
 
-    position: absolute;
+  position: absolute;
 
-    left: 0;
+  left: 0;
 
-    bottom: 0;
+  bottom: 0;
 
-    width: 0;
+  width: 0;
 
-    height: 2px;
+  height: 2px;
 
-    background: var(--ts-red);
+  background: var(--ts-red);
 
-    transition: width 0.25s ease;
+  transition: width 0.25s ease;
 }
-
 
 .ts-nav-link:hover {
-    color: var(--ts-light-red);
+  color: var(--ts-light-red);
 }
 
-
-.ts-nav-link:hover::after {
-    width: 100%;
-}
-
-
-.ts-nav-link.active {
-    color: #ffffff;
-}
-
-
+.ts-nav-link:hover::after,
 .ts-nav-link.active::after {
-    width: 100%;
+  width: 100%;
 }
 
 
@@ -625,147 +524,113 @@ select {
 ========================================================= */
 
 .ts-nav-button {
-    display: inline-flex;
+  display: inline-flex;
 
-    align-items: center;
+  align-items: center;
 
-    justify-content: center;
+  justify-content: center;
 
-    gap: 8px;
+  gap: 8px;
 
-    min-height: 44px;
+  min-height: 44px;
 
-    padding: 0 20px;
+  padding: 0 20px;
 
-    color: #ffffff;
+  color: #ffffff;
 
-    background: var(--ts-red);
+  background: var(--ts-red);
 
-    border: 1px solid var(--ts-red);
+  border: 1px solid var(--ts-red);
 
-    border-radius: 5px;
+  border-radius: 5px;
 
-    font-size: 13px;
+  font-size: 13px;
 
-    line-height: 1;
+  line-height: 1;
 
-    font-weight: 800;
+  font-weight: 800;
 
-    text-decoration: none;
+  text-decoration: none;
 
-    white-space: nowrap;
+  white-space: nowrap;
 
-    transition:
-        background 0.25s ease,
-        border-color 0.25s ease,
-        transform 0.25s ease;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
 }
-
 
 .ts-nav-button:hover {
-    color: #ffffff;
+  color: #ffffff;
 
-    background: var(--ts-red-dark);
+  background: var(--ts-red-dark);
 
-    border-color: var(--ts-red-dark);
+  border-color: var(--ts-red-dark);
 
-    transform: translateY(-1px);
-}
-
-
-.ts-nav-button i {
-    font-size: 13px;
+  transform: translateY(-1px);
 }
 
 
 /* =========================================================
-   MOBILE TOGGLE
+   MOBILE MENU TOGGLE
 ========================================================= */
 
 .ts-nav-toggle {
-    display: none;
+  display: none;
 
-    align-items: center;
+  align-items: center;
 
-    justify-content: center;
+  justify-content: center;
 
-    flex-direction: column;
+  flex-direction: column;
 
-    width: 52px;
+  width: 52px;
 
-    height: 52px;
+  height: 52px;
 
-    padding: 0;
+  padding: 0;
 
-    margin: 0;
+  margin: 0;
 
-    background: #080808;
+  background: #080808;
 
-    border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 
-    border-radius: 5px;
+  border-radius: 5px;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    flex-shrink: 0;
-
-    transition:
-        background 0.25s ease,
-        border-color 0.25s ease;
+  flex-shrink: 0;
 }
-
-
-.ts-nav-toggle:hover {
-    background: #111111;
-
-    border-color: var(--ts-red);
-}
-
 
 .ts-nav-toggle span {
-    display: block;
+  display: block;
 
-    width: 26px;
+  width: 26px;
 
-    height: 3px;
+  height: 3px;
 
-    margin: 3px 0;
+  margin: 3px 0;
 
-    background: #ffffff;
+  background: #ffffff;
 
-    border-radius: 2px;
+  border-radius: 2px;
 
-    transition:
-        transform 0.25s ease,
-        opacity 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
 }
-
-
-/* =========================================================
-   MOBILE TOGGLE ACTIVE
-========================================================= */
 
 .ts-nav-toggle.active span:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
+  transform: translateY(9px) rotate(45deg);
 }
-
 
 .ts-nav-toggle.active span:nth-child(2) {
-    opacity: 0;
+  opacity: 0;
 }
-
 
 .ts-nav-toggle.active span:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
-}
-
-
-/* =========================================================
-   MOBILE MENU
-========================================================= */
-
-.ts-nav-menu.open {
-    display: flex;
+  transform: translateY(-9px) rotate(-45deg);
 }
 
 
@@ -775,200 +640,113 @@ select {
 
 @media (max-width: 1100px) {
 
-    .ts-nav .container {
-        width: min(100% - 28px, 1500px);
-    }
+  .ts-nav .container {
+    width: min(100% - 28px, 1500px);
+  }
 
-    .ts-nav-menu {
-        gap: 20px;
-    }
+  .ts-nav-menu {
+    gap: 20px;
+  }
 
-    .ts-nav-links {
-        gap: 20px;
-    }
+  .ts-nav-links {
+    gap: 20px;
+  }
 
-    .ts-nav-link {
-        font-size: 13px;
-    }
+  .ts-nav-link {
+    font-size: 13px;
+  }
 
-    .ts-nav-button {
-        padding: 0 16px;
-    }
+  .ts-nav-button {
+    padding: 0 16px;
+  }
 }
 
 
 /* =========================================================
-   MOBILE / TABLET
+   MOBILE NAV
 ========================================================= */
 
 @media (max-width: 900px) {
 
-    .ts-nav-menu {
-        display: none;
+  .ts-nav-menu {
+    display: none;
 
-        position: absolute;
+    position: absolute;
 
-        top: 100%;
+    top: 100%;
 
-        left: 0;
+    left: 0;
 
-        right: 0;
+    right: 0;
 
-        width: 100%;
+    width: 100%;
 
-        padding: 18px 20px 22px;
+    padding: 18px 20px 22px;
 
-        margin: 0;
+    margin: 0;
 
-        flex-direction: column;
+    flex-direction: column;
 
-        align-items: stretch;
+    align-items: stretch;
 
-        justify-content: flex-start;
+    justify-content: flex-start;
 
-        gap: 8px;
+    gap: 8px;
 
-        background: #050505;
+    background: #050505;
 
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 
-        border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
-    }
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+  }
 
+  .ts-nav-menu.open {
+    display: flex;
+  }
 
-    .ts-nav-links {
-        display: flex;
+  .ts-nav-links {
+    display: flex;
 
-        flex-direction: column;
+    flex-direction: column;
 
-        align-items: stretch;
+    align-items: stretch;
 
-        gap: 0;
+    gap: 0;
 
-        width: 100%;
-    }
+    width: 100%;
+  }
 
+  .ts-nav-link {
+    width: 100%;
 
-    .ts-nav-link {
-        width: 100%;
+    justify-content: flex-start;
 
-        justify-content: flex-start;
+    padding: 13px 0;
 
-        padding: 13px 0;
+    font-size: 15px;
+  }
 
-        font-size: 15px;
-    }
+  .ts-nav-button {
+    width: 100%;
 
+    margin-top: 8px;
+  }
 
-    .ts-nav-button {
-        width: 100%;
+  .ts-nav-toggle {
+    display: flex;
+  }
 
-        margin-top: 8px;
-    }
+  .ts-nav-inner {
+    min-height: 92px;
 
+    gap: 16px;
+  }
 
-    .ts-nav-toggle {
-        display: flex;
-    }
-
-
-    .ts-nav-inner {
-        min-height: 92px;
-
-        gap: 16px;
-    }
-
-
-    /* =====================================================
-       LOGO — SAME SIZE
-    ===================================================== */
-
-    .ts-logo-brand {
-        font-size: 46px;
-    }
-
-    .ts-logo-tm {
-        font-size: 15px;
-
-        left: calc(100% + 6px);
-
-        top: -2px;
-    }
-
-    .ts-logo-certified {
-        font-size: 10px;
-    }
-
-    .ts-logo-solutions {
-        font-size: 18px;
-
-        padding: 8px 15px;
-    }
-
-
-    #root {
-        padding-top: 132px;
-    }
-}
-
-
-/* =========================================================
-   MOBILE TOP BAR
-========================================================= */
-
-@media (max-width: 700px) {
-
-    .ts-nav-top {
-        min-height: 40px;
-    }
-
-
-    .ts-nav-top-inner {
-        min-height: 40px;
-
-        gap: 8px;
-    }
-
-
-    .ts-nav-top-left {
-        gap: 7px;
-    }
-
-
-    .ts-nav-top-item {
-        font-size: 11px;
-
-        gap: 5px;
-    }
-
-
-    .ts-nav-top-item i {
-        font-size: 11px;
-    }
-
-
-    .ts-nav-separator {
-        height: 16px;
-    }
-
-
-    .ts-nav .container {
-        width: calc(100% - 20px);
-    }
-
-
-    .ts-nav-inner {
-        min-height: 92px;
-    }
-
-
-    .ts-nav-toggle {
-        width: 52px;
-
-        height: 52px;
-    }
+  #root {
+    padding-top: 132px;
+  }
 }
 
 
@@ -976,330 +754,388 @@ select {
    SMALL MOBILE
 ========================================================= */
 
-@media (max-width: 520px) {
+@media (max-width: 700px) {
 
-    .ts-nav-top {
-        min-height: 34px;
-    }
+  .ts-nav-top {
+    min-height: 40px;
+  }
 
+  .ts-nav-top-inner {
+    min-height: 40px;
 
-    .ts-nav-top-inner {
-        min-height: 34px;
+    gap: 8px;
+  }
 
-        gap: 5px;
-    }
+  .ts-nav-top-left {
+    gap: 7px;
+  }
 
+  .ts-nav-top-item {
+    font-size: 11px;
 
-    .ts-nav-top-left {
-        gap: 5px;
-    }
+    gap: 5px;
+  }
 
+  .ts-nav-top-item i {
+    font-size: 11px;
+  }
 
-    .ts-nav-top-item {
-        font-size: 10px;
+  .ts-nav-separator {
+    height: 16px;
+  }
 
-        gap: 4px;
-    }
+  .ts-nav .container {
+    width: calc(100% - 20px);
+  }
 
+  .ts-nav-inner {
+    min-height: 92px;
+  }
 
-    .ts-nav-top-item i {
-        font-size: 10px;
-    }
+  /*
+     LOGO STAYS LARGE
+  */
 
+  .ts-logo-brand,
+  .ts-logo-brand-name {
+    font-size: 52px;
+  }
 
-    .ts-nav-separator {
-        height: 14px;
-    }
+  .ts-logo-tm {
+    font-size: 15px;
 
+    left: calc(100% + 7px);
 
-    .ts-nav .container {
-        width: calc(100% - 20px);
-    }
+    top: -3px;
+  }
 
+  .ts-logo-bottom {
+    height: 38px;
 
-    .ts-nav-inner {
-        min-height: 92px;
+    margin-top: 7px;
+  }
 
-        gap: 10px;
-    }
+  .ts-logo-certified {
+    font-size: 14px;
+  }
 
+  .ts-logo-solutions {
+    font-size: 18px;
 
-    /* =====================================================
-       LOGO — KEEP SAME SIZE
-    ===================================================== */
+    padding: 8px 15px;
 
-    .ts-logo-brand {
-        font-size: 46px;
+    border-radius: 5px;
+  }
 
-        letter-spacing: 1px;
-    }
+  .ts-nav-toggle {
+    width: 52px;
 
-
-    .ts-logo-tm {
-        font-size: 15px;
-
-        left: calc(100% + 6px);
-
-        top: -2px;
-    }
-
-
-    .ts-logo-bottom {
-        height: 36px;
-
-        margin-top: 7px;
-    }
-
-
-    .ts-logo-certified {
-        font-size: 10px;
-    }
-
-
-    .ts-logo-solutions {
-        font-size: 18px;
-
-        padding: 8px 15px;
-
-        border-radius: 5px;
-    }
-
-
-    .ts-nav-toggle {
-        width: 52px;
-
-        height: 52px;
-    }
-
-
-    #root {
-        padding-top: 126px;
-    }
+    height: 52px;
+  }
 }
 
 
 /* =========================================================
-   VERY SMALL MOBILE
+   520px
+========================================================= */
+
+@media (max-width: 520px) {
+
+  .ts-nav-top {
+    min-height: 34px;
+  }
+
+  .ts-nav-top-inner {
+    min-height: 34px;
+
+    gap: 5px;
+  }
+
+  .ts-nav-top-left {
+    gap: 5px;
+  }
+
+  .ts-nav-top-item {
+    font-size: 10px;
+
+    gap: 4px;
+  }
+
+  .ts-nav-top-item i {
+    font-size: 10px;
+  }
+
+  .ts-nav-separator {
+    height: 14px;
+  }
+
+  .ts-nav .container {
+    width: calc(100% - 20px);
+  }
+
+  .ts-nav-inner {
+    min-height: 92px;
+
+    gap: 10px;
+  }
+
+  .ts-logo-brand,
+  .ts-logo-brand-name {
+    font-size: 52px;
+  }
+
+  .ts-logo-tm {
+    font-size: 15px;
+
+    left: calc(100% + 7px);
+
+    top: -3px;
+  }
+
+  .ts-logo-bottom {
+    height: 38px;
+
+    margin-top: 7px;
+  }
+
+  .ts-logo-certified {
+    font-size: 14px;
+  }
+
+  .ts-logo-solutions {
+    font-size: 18px;
+
+    padding: 8px 15px;
+  }
+
+  .ts-nav-toggle {
+    width: 52px;
+
+    height: 52px;
+  }
+
+  #root {
+    padding-top: 126px;
+  }
+}
+
+
+/* =========================================================
+   430px
 ========================================================= */
 
 @media (max-width: 430px) {
 
-    .ts-nav .container {
-        width: calc(100% - 16px);
-    }
+  .ts-nav .container {
+    width: calc(100% - 16px);
+  }
 
+  .ts-nav-inner {
+    gap: 8px;
+  }
 
-    .ts-nav-inner {
-        gap: 8px;
-    }
+  .ts-logo-brand,
+  .ts-logo-brand-name {
+    font-size: 52px;
+  }
 
+  .ts-logo-tm {
+    font-size: 15px;
 
-    .ts-logo-brand {
-        font-size: 46px;
-    }
+    left: calc(100% + 7px);
+  }
 
+  .ts-logo-certified {
+    font-size: 14px;
+  }
 
-    .ts-logo-tm {
-        font-size: 15px;
+  .ts-logo-solutions {
+    font-size: 18px;
 
-        left: calc(100% + 6px);
-    }
+    padding: 8px 15px;
+  }
 
+  .ts-nav-toggle {
+    width: 50px;
 
-    .ts-logo-certified {
-        font-size: 10px;
-    }
-
-
-    .ts-logo-solutions {
-        font-size: 18px;
-
-        padding: 8px 15px;
-    }
-
-
-    .ts-nav-toggle {
-        width: 50px;
-
-        height: 50px;
-    }
+    height: 50px;
+  }
 }
 
 
 /* =========================================================
-   EXTREMELY SMALL MOBILE
+   380px
 ========================================================= */
 
 @media (max-width: 380px) {
 
-    .ts-nav .container {
-        width: calc(100% - 12px);
-    }
+  .ts-nav .container {
+    width: calc(100% - 12px);
+  }
 
+  .ts-nav-inner {
+    gap: 6px;
+  }
 
-    .ts-nav-inner {
-        gap: 6px;
-    }
+  .ts-logo-brand,
+  .ts-logo-brand-name {
+    font-size: 52px;
+  }
 
+  .ts-logo-tm {
+    font-size: 15px;
 
-    .ts-logo-brand {
-        font-size: 46px;
-    }
+    left: calc(100% + 6px);
+  }
 
+  .ts-logo-certified {
+    font-size: 14px;
+  }
 
-    .ts-logo-tm {
-        font-size: 15px;
+  .ts-logo-solutions {
+    font-size: 18px;
 
-        left: calc(100% + 5px);
-    }
+    padding: 8px 15px;
+  }
 
+  .ts-nav-toggle {
+    width: 48px;
 
-    .ts-logo-certified {
-        font-size: 10px;
-    }
-
-
-    .ts-logo-solutions {
-        font-size: 18px;
-
-        padding: 8px 15px;
-    }
-
-
-    .ts-nav-toggle {
-        width: 48px;
-
-        height: 48px;
-    }
+    height: 48px;
+  }
 }
 
 
 /* =========================================================
-   🔥 FINAL EXACT ALIGNMENT OVERRIDES
-   KEEP THESE AT THE VERY END
+   🔥 FINAL LOGO OVERRIDES
 ========================================================= */
-
-
-/*
-   STEP 1
-   TECHNOSAFE text defines the width.
-*/
 
 .ts-logo-text {
-    width: max-content !important;
+  position: relative !important;
 
-    max-width: max-content !important;
+  display: block !important;
 
-    flex-shrink: 0 !important;
+  width: max-content !important;
+
+  max-width: max-content !important;
+
+  flex-shrink: 0 !important;
 }
 
-
-/*
-   STEP 2
-   Brand width = TECHNOSAFE only.
-*/
 
 .ts-logo-brand {
-    position: relative !important;
+  position: relative !important;
 
-    display: block !important;
+  display: block !important;
 
-    width: max-content !important;
+  width: max-content !important;
 
-    max-width: max-content !important;
+  max-width: max-content !important;
+
+  font-size: 52px !important;
+
+  font-weight: 950 !important;
+
+  letter-spacing: 1px !important;
 }
 
-
-/*
-   STEP 3
-   Actual TECHNOSAFE text controls width.
-*/
 
 .ts-logo-brand-name {
-    display: block !important;
+  display: block !important;
 
-    width: max-content !important;
+  width: max-content !important;
 
-    max-width: max-content !important;
+  max-width: max-content !important;
 
-    white-space: nowrap !important;
+  font-size: 52px !important;
+
+  font-weight: 950 !important;
+
+  letter-spacing: 1px !important;
+
+  white-space: nowrap !important;
 }
 
-
-/*
-   STEP 4
-   TM is completely removed from width calculation.
-*/
 
 .ts-logo-tm {
-    position: absolute !important;
+  position: absolute !important;
 
-    left: calc(100% + 6px) !important;
+  left: calc(100% + 7px) !important;
 
-    top: -2px !important;
+  top: -3px !important;
 
-    width: max-content !important;
+  width: max-content !important;
 
-    max-width: max-content !important;
+  max-width: max-content !important;
+
+  font-size: 15px !important;
+
+  font-weight: 800 !important;
 }
 
-
-/*
-   STEP 5
-   Bottom row gets EXACT TECHNOSAFE width.
-*/
-
-.ts-logo-bottom {
-    position: relative !important;
-
-    display: block !important;
-
-    width: 100% !important;
-
-    max-width: 100% !important;
-
-    overflow: visible !important;
-}
-
-
-/*
-   STEP 6
-   SOLUTIONS right edge is locked to
-   TECHNOSAFE right edge.
-*/
-
-.ts-logo-solutions {
-    position: absolute !important;
-
-    right: 0 !important;
-
-    left: auto !important;
-
-    margin: 0 !important;
-
-    transform: translateY(-50%) !important;
-}
 
 /* =========================================================
-   BIGGER + BOLDER TECHNOSAFE
+   BOTTOM LOGO ALIGNMENT
 ========================================================= */
 
-.ts-logo-brand {
-    font-size: 52px !important;
-    font-weight: 900 !important;
-    letter-spacing: 1px !important;
+.ts-logo-bottom {
+  position: relative !important;
+
+  display: block !important;
+
+  width: 100% !important;
+
+  max-width: 100% !important;
+
+  overflow: visible !important;
 }
 
-.ts-logo-brand-name {
-    font-size: 52px !important;
-    font-weight: 900 !important;
-    letter-spacing: 1px !important;
+
+/* =========================================================
+   ISO — BIGGER + LEFT TO RED START
+========================================================= */
+
+.ts-logo-certified {
+  position: absolute !important;
+
+  left: 0 !important;
+
+  top: 50% !important;
+
+  transform: translateY(-50%) !important;
+
+  /*
+     RED SOLUTIONS BOX APPROX WIDTH = 135px
+     ISO AREA ENDS EXACTLY WHERE RED BOX STARTS
+  */
+  width: calc(100% - 135px) !important;
+
+  max-width: calc(100% - 135px) !important;
+
+  font-size: 14px !important;
+
+  font-weight: 700 !important;
+
+  letter-spacing: 0.15px !important;
+
+  white-space: nowrap !important;
+
+  overflow: hidden !important;
 }
 
-/* TM stays smaller and doesn't affect width */
-.ts-logo-tm {
-    font-size: 15px !important;
-    font-weight: 800 !important;
-    left: calc(100% + 7px) !important;
-    top: -3px !important;
+
+/* =========================================================
+   SOLUTIONS — RIGHT LOCKED
+========================================================= */
+
+.ts-logo-solutions {
+  position: absolute !important;
+
+  right: 0 !important;
+
+  left: auto !important;
+
+  margin: 0 !important;
+
+  transform: translateY(-50%) !important;
 }

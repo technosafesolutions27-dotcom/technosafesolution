@@ -26,7 +26,7 @@ export default function Navbar() {
 
             <span className="ts-nav-top-item">
               <i className="fa-solid fa-shield-halved"></i>
-              <span>Fire Safety & Protection Solutions</span>
+              Fire Safety & Protection Solutions
             </span>
 
             <span className="ts-nav-separator"></span>
@@ -36,18 +36,17 @@ export default function Navbar() {
               className="ts-nav-top-item"
             >
               <i className="fa-solid fa-envelope"></i>
-              <span>sales@technosafe.in</span>
+              sales@technosafe.in
             </a>
 
           </div>
-
 
           <a
             href="tel:+919813055906"
             className="ts-nav-top-item"
           >
             <i className="fa-solid fa-phone"></i>
-            <span>+91 98130 55906</span>
+            +91 98130 55906
           </a>
 
         </div>
@@ -73,7 +72,7 @@ export default function Navbar() {
             <div className="ts-logo-text">
 
               {/* =================================================
-                  TECHNOSAFE WORDMARK
+                  TECHNOSAFE BRAND
               ================================================= */}
               <div className="ts-logo-brand">
 
@@ -81,7 +80,6 @@ export default function Navbar() {
                   TECHNOSAFE
                 </span>
 
-                {/* TM stays inside brand but is ABSOLUTE */}
                 <span className="ts-logo-tm">
                   ™
                 </span>
@@ -90,7 +88,7 @@ export default function Navbar() {
 
 
               {/* =================================================
-                  LOGO BOTTOM
+                  CERTIFICATION + SOLUTIONS
               ================================================= */}
               <div className="ts-logo-bottom">
 
@@ -141,7 +139,7 @@ export default function Navbar() {
               className="ts-nav-button"
               onClick={() => setOpen(false)}
             >
-              <span>Get Safety Audit</span>
+              Get Safety Audit
               <i className="fa-solid fa-arrow-right"></i>
             </NavLink>
 
