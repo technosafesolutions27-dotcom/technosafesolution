@@ -3,7 +3,7 @@ import "./StatsBar.css";
 
 const stats = [
   {
-    number: 18,
+    number: 14,
     suffix: "+",
     label: "Years of Expertise",
   },
